@@ -79,7 +79,7 @@ body, input, textarea, select, .main_font, .buttons, #menu li.custom_block .menu
 }
 /* Contrast font */
 .contrast_font, .control-label, .checkout-content, .box-content ul, .button, .btn, h1, h2, h3, h4, h5, .heading, .price, .title, .box-heading, #menu, .mobile_menu, .nav-tabs a, .cart-info tbody .name a, .checkout-heading {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Raleway', serif;
 }
 body, input, textarea, select, .buttons, #menu li.custom_block .menu_drop_down p, .sale_badge, small, .sq_icon, .light_font, h1, .heading, .box-heading, .checkout-heading, .rich_banner .inner h4, .rich_banner .info_wrapper h4, .main_font, .rich_banner .info_wrapper p a, .radio label, .checkbox label, .text-danger {
 	font-weight:500;
@@ -101,33 +101,41 @@ input, textarea, select, .form-control {
 h1, h2, h3, h4, h5 {
 	line-height:normal;
 }
-h1, .welcome {
+h1, .welcome, h2.ak-head {
         display: block;
         font-size: 27px;
         font-family: 'Raleway', sans-serif;
         text-transform: uppercase;
-        margin-bottom: 15px;
+        margin-bottom: 55px;
         margin-top: 0px;
         color: #1e1e1e;
         font-weight: 800;
 }
+h2.ak-head{margin-bottom: 25px;}
 #column-left + #content h1, #column-left + #content .welcome {
 	margin-bottom:25px;
 }
 h2 {
 	margin-top:0;
-	font-size: 24px;
+	font-size: 28px;
 	margin-bottom: 18px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	color: #1e1e1e;
 }
 h3 {
 	font-size: 16px;
 	margin-bottom:16px;
 	margin-top:0;
+	font-family: 'Raleway', sans-serif;
+	color: #1e1e1e;
+	font-weight: 700;
 }
 p {
 	margin-top: 0px;
-	margin-bottom: 15px;
-	line-height:21px;
+	margin-bottom: 11px;
+	line-height: 22px;
+	word-spacing: 1px;
 }
 a, a.active, a.selected, input, button, .button, a:hover, button:hover, .button:hover, li.active > a, .box-content > ul > li ul > li > a, .box-content > ul > li ul > li > a:hover {
 	transition:			color 300ms, border-color 300ms ease-in-out, background-color 300ms ease-in-out;
@@ -592,9 +600,11 @@ a.sq_tag {
 
 .header1, .header2 {
 	margin-bottom:15px;
-	min-height:193px;
-        padding-bottom: 15px;
-        box-shadow: 0px 2px 5px 2px #e1e1e1;
+	min-height: 193px;
+	padding-bottom: 14px;
+	position: relative;
+	z-index: 999999;
+	box-shadow: 0px 2px 5px 2px #e1e1e1;
 }
 
 .header_main {
@@ -1964,7 +1974,7 @@ a.button.remove:hover, .button.remove:hover {
 /* module heading in content */
 .box-heading {
         padding: 10px 10px 10px 0px;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Raleway', sans-serif;
         /* border-bottom: 1px solid #dddddd; */
         position: relative;
         color: #979797;
@@ -2022,7 +2032,7 @@ a.button.remove:hover, .button.remove:hover {
 	color:#222222;
 }
 .box-login p{
-    font-family: 'Roboto';
+    font-family: 'Raleway';
     font-size: 17px;
     color: #303131;
     font-weight: 800;
@@ -3620,11 +3630,11 @@ a.button.remove:hover, .button.remove:hover {
 	border:1px solid #e5e5e5;
 	display:inline-block;
 	content:"\f040";
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
 	font-size: 14px;
-    font-family: FontAwesome;
+        font-family: FontAwesome;
 	position:absolute;
 	right:0;
 	bottom:5px;
@@ -4802,7 +4812,7 @@ a:focus, a:active,#menu > ul > li,#menu > ul > li:focus,#menu > ul > li:active{
     text-transform: uppercase;
 }
 .phone-f span a{ 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 800;
     letter-spacing: 1.2px;
     color: #fff;
@@ -4923,24 +4933,116 @@ a.pull-right.login-forgotten {
 }
 .account-login .container #content:before,.account-login .container #content:after,
 .product-category-59 .container #content:before,.product-category-59 .container #content:after,
-.product-category-59 .container #content:before,.product-category-59 .container #content:after
+.information-information-7 .container #content:before,.information-information-7 .container #content:after,
+.information-information-8 .container #content:before,.information-information-8 .container #content:after,
+.information-contact .container #content:before,.information-contact .container #content:after,
+.information-information-11 .container #content:before,.information-information-11 .container #content:after,
+.information-information-13 .container #content:before,.information-information-13 .container #content:after,
+.error-not_found .container #content:before,.error-not_found .container #content:after
 {
     content: '';
     left: -250px;
     position: absolute;
     width: 250px;
+    object-fit: contain;
     bottom: 0px;
     background: url(../image/shop-bg1.png) bottom left no-repeat;
     height: 850px;
 }
 .account-login .container #content:after,
-.product-category-59 .container #content:after
-{
+.product-category-59 .container #content:after{
     background: url(../image/shop-bg2.png) bottom right no-repeat;
     left: auto;
     right: -250px;
 }
-.account-login .container #content,
-.product-category-59 .container #content {
-    min-height: 750px;
+.information-information-7 .container #content:before{ background: url(../image/ship-bg1.png) bottom left no-repeat;top: -200px;}
+.information-information-7 .container #content:after{ background: url(../image/ship-bg2.png) bottom left no-repeat;left: auto;right: -250px;top: -200px;}
+.information-information-8 .container #content:before, .information-contact .container #content:before{ background: url(../image/coop-bg1.png) bottom left no-repeat;bottom: -30px;left: -362px;width: 385px;}
+.information-information-8 .container #content:after, .information-contact .container #content:after{ background: url(../image/coop-bg2.png) bottom left no-repeat;left: auto;right: -350px;bottom: -30px;width: 385px;}
+.information-information-11 .container #content:before{background: url(../image/bonc-bg1.png) bottom left no-repeat;bottom: -30px;left: -390px;width: 100%;z-index: 9999999;}
+.information-information-11 .container #content:after{background: url(../image/bonc-bg2.png) bottom left no-repeat;left: auto;right: -390px;float: right;bottom: -225px;width: 50%;}
+.information-information-13 .container #content:before{background: url(../image/brand-bg1.png) bottom left no-repeat;bottom: -30px;left: -362px;width: 385px;object-fit: contain;}
+.information-information-13 .container #content:after{ background: url(../image/brand-bg2.png) bottom left no-repeat;left: auto;right: -350px;bottom: -30px;width: 385px;}
+.error-not_found .container #content:before{background: url(../image/err404-1.png)  bottom left no-repeat;bottom: -30px;left: -390px;width: 100%;z-index: 9999999;}
+.error-not_found .container #content:after{ background: url(../image/err404-3.png) bottom left no-repeat;left: auto;right: -390px;float: right;bottom: -225px;width: 50%;}
+
+.account-login .container #content,.information-contact .container #content,
+.product-category-59 .container #content,.information-information-11 .container #content, .error-not_found .container #content{
+    min-height: 580px;
+}
+.ship-sp h3 {
+    margin: 45px 0;
+}
+.ship-sp h2 {
+    margin: 25px 0;
+}
+.ship-sp ul li span{
+    font-weight: 700;
+}
+.information-information-11 .container #content h1, .error-not_found .container #content h1{display: none;}
+.phone-c, .work-c, .adr-c, .mail-c, .perc-c {
+    font-family: 'Raleway', sans-serif;
+    color: #242424;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.phone-c span, .work-c span, .adr-c span, .mail-c span, .perc-c span {
+    font-family: 'Raleway', sans-serif;
+    color: #890e4f;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 31px;
+    text-transform: none;
+}
+.phone-c strong, .work-c strong, .adr-c strong, .mail-c strong, .perc-c strong {
+    font-family: 'Raleway', sans-serif;
+    color: #242424;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: none;
+}
+.work-c .sp-wcork{color: #890e4f; text-transform: uppercase;}
+.phone-c span:before, .work-c span:before, .adr-c span:before, .mail-c span:before, .perc-c span:before {
+    color: #890e4f;
+    content: "\f095";
+    font-weight: 900;
+    font-size: 16px;
+    font-family: FontAwesome;
+    position: absolute;
+    left: -5px;
+}
+.phone-c span:before{left: -2px;}
+.work-c span:before{content: "\f017";} .adr-c span:before{content: "\f041";left: -2px;} .mail-c span:before{content: "\f0e0";} .perc-c span:before{content: "\f007";}
+.icons-c a.sq_icon {
+    margin: 0 5px 0px 0;
+}
+.icons-c a.sq_icon .fa {
+    color: #1e1e1e;
+}
+.icons-c a.sq_icon .fa:hover{
+    color: #890e4f;
+}
+.grey-btn{
+    background: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 40px;
+    font-size: 13.3px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+.work-c:before{
+    content: "";
+    position: absolute;
+    right: 15%;
+    top: -85%;
+    background: url(../image/cont-cl.png) right top no-repeat;
+    width: 150px;
+    height: 115px;
 }
