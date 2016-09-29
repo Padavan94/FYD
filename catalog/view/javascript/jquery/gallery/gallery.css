@@ -1,0 +1,87 @@
+.ct-gallery {
+    overflow: hidden;
+    min-height: 300px;
+}
+.ct-gallery-item {
+    position: relative;
+    float: left;
+    margin-top: -1px;
+    overflow: hidden;
+}
+.ct-gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+.ct-gallery.ct-gallery--col4 .ct-gallery-item {
+    width: 25%;
+}
+.ct-gallery-item img {
+    width: 100%;
+}
+.ct-gallery-item img {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.ct-u-colorWhite {
+    color: #498bcf;
+}
+.ct-gallery-item figcaption {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 23px 26px;
+}
+.ct-gallery-itemDefaultHover figcaption {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+}
+.ct-gallery-itemDefaultHover figcaption {
+    background-color: rgba(73, 139, 207, 0.9);
+}
+.ct-u-displayTable, .ct-u-displayTableVertical {
+    display: table;
+    width: 100%;
+}
+.ct-u-displayTableVertical {
+    height: 100%;
+}
+.ct-u-displayTableCell {
+    display: table-cell;
+}
+.ct-u-displayTableVertical .ct-u-displayTableCell {
+    vertical-align: middle;
+}
+.ct-fw-700 {
+    font-weight: 700;
+}
+.ct-gallery-itemDefaultHover:hover figcaption {
+    bottom: 0;
+}
+.btn-default:hover {
+    color: #ffffff;
+    background-color: #498bcf;
+    border-color: #498bcf;
+}
+@media (max-width: 991px) {
+	.ct-gallery.ct-gallery--col5 .ct-gallery-item, .ct-gallery.ct-gallery--col4 .ct-gallery-item {
+		width: 33.33%;
+	}
+}
+@media (max-width: 767px) {
+	.ct-gallery.ct-gallery--col5 .ct-gallery-item, .ct-gallery.ct-gallery--col4 .ct-gallery-item, .ct-gallery.ct-gallery--col3 .ct-gallery-item, .ct-gallery.ct-gallery--col2 .ct-gallery-item {
+		width: 50%;
+	}
+}
+@media (max-width: 480px) {
+	.ct-gallery.ct-gallery--col5 .ct-gallery-item, .ct-gallery.ct-gallery--col4 .ct-gallery-item, .ct-gallery.ct-gallery--col3 .ct-gallery-item, .ct-gallery.ct-gallery--col2 .ct-gallery-item {
+		width: 100%;
+	}
+}

@@ -167,8 +167,12 @@
                     <?php } else { ?>
                     <option value="column_right"><?php echo $text_column_right; ?></option>
                     <?php } ?>
-
-                  <?php } ?>  
+                    <?php if ($layout_module['position'] == 'content_newpos') { ?>
+                    <option value="content_newpos" selected="selected">Новая позиция</option>
+                    <?php } else { ?>
+                    <option value="content_newpos">Новая позиция</option>
+                    <?php } ?>
+                                      <?php } ?>  
                     
                   </select></td>
                 <td class="text-right"><input type="text" name="layout_module[<?php echo $module_row; ?>][sort_order]" value="<?php echo $layout_module['sort_order']; ?>" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>
@@ -242,6 +246,7 @@ function addModule() {
     html += '    <option value="content_bottom"><?php echo $text_content_bottom; ?></option>';
     html += '    <option value="column_left"><?php echo $text_column_left; ?></option>';
     html += '    <option value="column_right"><?php echo $text_column_right; ?></option>';
+    html += '    <option value="content_newpos">Новая позиция</option>';
 	<?php } ?>
     html += '  </select></td>';
 	html += '  <td class="text-left"><input type="text" name="layout_module[' + module_row + '][sort_order]" value="" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>';

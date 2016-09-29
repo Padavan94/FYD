@@ -1,6 +1,6 @@
 <div id="cart" class="shortcut">
  <a class="shortcut_heading" href="<?php echo $cart; ?>" id="cart-total"><?php echo $text_items; ?></a>
-  <div class="content">
+  <!--<div class="content">
     <?php if ($products || $vouchers) { ?>
     <div class="mini-cart-info">
       <table>
@@ -27,7 +27,7 @@
         <tr>
           <td colspan="2" class="voucher border"><span class="name" style="display:block; float:left">1&nbsp;x&nbsp;<?php echo $voucher['description']; ?></span></td>
           <td class="remove border"><a title="<?php echo $button_remove; ?>" onclick="(getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') ? location = 'index.php?route=checkout/cart&remove=<?php echo $voucher['key']; ?>' : $('#cart').load('index.php?route=module/cart&remove=<?php echo $voucher['key']; ?>' + ' #cart > *');"><span class="remove">x</span></a></td>
-          </tr>
+        </tr>
         <?php } ?>
       </table>
     </div>
@@ -48,5 +48,5 @@
     <?php } else { ?>
     <div class="empty main_font"><?php echo $text_empty; ?></div>
     <?php } ?>
-  </div>
+  </div>-->
   </div>

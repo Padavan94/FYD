@@ -24,13 +24,13 @@
   <h1><?php echo $heading_title; ?></h1>
   <?php echo $content_top; ?>
       <div class="row">
-        <div class="col-sm-6 margin-b">
+        <div class="col-sm-4 margin-b">
             <div class="box-heading"><?php echo $text_new_customer; ?></div>
             <p><?php echo $text_register_account; ?></p>
             <a href="<?php echo $register; ?>" class="button"><?php echo $text_register; ?></a>
         </div>
         
-        <div class="col-sm-6">
+        <div class="col-sm-4 box-login">
             <div class="box-heading"><?php echo $text_returning_customer; ?></div>
             <p><?php echo $text_i_am_returning_customer; ?></p>
             <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
@@ -42,7 +42,7 @@
                 <label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
                 <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
                 <a href="<?php echo $forgotten; ?>" class="pull-right login-forgotten"><?php echo $text_forgotten; ?></a></div>
-              <input type="submit" value="<?php echo $button_login; ?>" class="button" />
+              <input type="submit" value="<?php echo $button_login; ?>" class="button btn-log" />
               <?php if ($redirect) { ?>
               <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
               <?php } ?>

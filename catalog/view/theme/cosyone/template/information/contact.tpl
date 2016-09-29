@@ -17,17 +17,16 @@
     
     <h1><?php echo $heading_title; ?></h1>
       
-      <?php if ($cosyone_google_map) { ?>
+      <!--<?php if ($cosyone_google_map) { ?>
   <div class="contact_map">
   <?php echo html_entity_decode($cosyone_google_map, ENT_QUOTES, 'UTF-8'); ?>
    </div>
-  <?php } ?>
+  <?php } ?>-->
   
-      <div class="box-heading"><?php echo $text_location; ?></div>
-          <div class="row">
-            <?php if ($image) { ?>
-            <div class="col-sm-3 margin-b">
-            <img src="<?php echo $image; ?>" alt="<?php echo $store; ?>" title="<?php echo $store; ?>" />
+      <div class="box-heading"></div>
+          <div class="row">            
+            <div class="col-sm-6 margin-b">
+            <!--<?php echo $text_location; ?><?php if ($image) { ?><img src="<?php echo $image; ?>" alt="<?php echo $store; ?>" title="<?php echo $store; ?>" />
             </div>
             <?php } ?>
             <div class="col-sm-3 margin-b">
@@ -35,18 +34,27 @@
 			<p><?php echo $address; ?></p>
             <?php if ($geocode) { ?>
   			<a href="https://maps.google.com/maps?q=<?php echo urlencode($geocode); ?>&hl=<?php echo $geocode_hl; ?>&t=m&z=15" target="_blank"><i class="fa fa-map-marker"></i> <?php echo $button_map; ?></a>
-  			<?php } ?>
+  			<?php } ?>-->
+            <div class="col-sm-6">
+                <div class="col-sm-12"><span class="contrast_font"><?php echo $text_telephone; ?></span><br />
+			<?php echo $telephone; ?><br /></div>
+                <div class="col-sm-12"><strong>Контактное лицо</strong><br />Диана</div>
+            </div>
+            <div class="col-sm-6">
+                <div class="col-sm-12"><strong>Адрес</strong><br />г. Москва, пер. Лермонтовский</div>
+                <div class="col-sm-12"><strong>Email</strong><br />ssdfsd@fg.gh</div>
+            </div>
             </div>
             <div class="col-sm-3 margin-b">
-            <span class="contrast_font"><?php echo $text_telephone; ?></span><br />
-			<?php echo $telephone; ?><br />
-            <?php if ($fax) { ?>
+           
+            <!--<?php if ($fax) { ?>
   			<br /><span class="contrast_font"><?php echo $text_fax; ?></span><br />
   			<?php echo $fax; ?>
-  			<?php } ?>
+  			<?php } ?>-->
+            <strong>График работы:</strong><br />ПН-ПТ - 9.00-20.00<br />СБ - 10.00-17.00<br />ВС - ВЫХОДНОЙ
             </div>
-            <div class="col-sm-3 margin-b">
-            <?php if ($open) { ?>
+            <div class="col-sm-3">
+            <!--<?php if ($open) { ?>
             <span class="contrast_font"><?php echo $text_open; ?></span><br />
 			<?php echo $open; ?>
             <br />
@@ -54,11 +62,21 @@
             <?php if ($comment) { ?>
             <br /><span class="contrast_font"><?php echo $text_comment; ?></span><br />
             <?php echo $comment; ?>
-            <?php } ?>
+            <?php } ?>-->
+            <div class="box-content icons_wrapper">
+                <a href="#" class="external sq_icon" data-tooltip="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#" class="external sq_icon" data-tooltip="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" class="external sq_icon" data-tooltip="Pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="#" class="external sq_icon" data-tooltip="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" class="external sq_icon" data-tooltip="VK"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <div class="clearfix"></div>
+            </div>
+            <div class="write-btn">Напишите нам</div>
+            
             </div>
           </div>
       
-      <?php if ($locations) { ?>
+      <!--<?php if ($locations) { ?>
       <div class="box-heading"><?php echo $text_store; ?></div>
       <div class="panel-group" id="accordion">
         <?php foreach ($locations as $location) { ?>
@@ -105,9 +123,9 @@
         </div>
         <?php } ?>
       </div>
-      <?php } ?>
+      <?php } ?>-->
       
-      <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+      <!--<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
         <fieldset>
           <div class="box-heading"><?php echo $text_contact; ?></div>
           <div class="row">
@@ -141,7 +159,7 @@
           </div>
           </div>
         </fieldset>
-      </form>
+      </form>-->
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>

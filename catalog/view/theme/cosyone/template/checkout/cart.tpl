@@ -104,7 +104,23 @@
               <?php } ?>
             </tbody>
           </table>
-          <div class="cart_bottom_line"><a href="<?php echo $continue; ?>" class="button contrast"><?php echo $button_shopping; ?></a></div>
+          <div class="cart_bottom_line">
+              
+              <div class="col-md-4"><a href="<?php echo $continue; ?>" class="button contrast"><?php echo $button_shopping; ?></a></div>
+              <div class="col-md-4">
+                 <?php foreach ($totals as $total) { ?> <?php echo $total['text']; ?><?php } ?>
+                <table id="total" class="contrast_font">
+                    
+                    <tr> <?php foreach ($totals as $total) { ?>                     
+                      <td class="right amounts"><?php echo $total['text']; ?></td><?php } ?>
+                    </tr>
+                    <?php } ?>
+                </table>
+              </div>
+              <div class="col-md-4">
+                <a href="<?php echo $checkout; ?>" class="button active checkout"><?php echo $button_checkout; ?></a>
+              </div>
+          </div>
           </div>
         </div>
       </form>
@@ -122,19 +138,12 @@
       </div>
       
       <div class="col-sm-4">
-      <div class="cart-total">
-       <table id="total" class="contrast_font">
-      <?php foreach ($totals as $total) { ?>
-      <tr>
-        <td class="right"><?php echo $total['title']; ?></td>
-        <td class="right amounts"><?php echo $total['text']; ?></td>
-      </tr>
-      <?php } ?>
-    </table>
-    <div class="cart-total-bottom">
+     <!-- <div class="cart-total">
+
+  <div class="cart-total-bottom">
     <a href="<?php echo $checkout; ?>" class="button active checkout"><?php echo $button_checkout; ?></a>
     </div>
-       </div>
+       </div>-->
       </div>
       
       </div>

@@ -1,10 +1,8 @@
 <?php echo $header; ?>
 <div class="container">
-  <ul class="breadcrumb">
+  <!--<ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
+    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li><?php } ?></ul>-->
   <div class="row"><?php echo $column_left; ?>
 <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
@@ -35,7 +33,8 @@
   <div class="category-grid <?php echo $cosyone_category_per_row; ?>">
   
   <?php foreach ($categories as $category) { ?><!--
-    --><div class="item contrast_font">
+    -->
+    <div class="item contrast_font">
     <?php if ($category['thumb']) { ?>
 	<div class="image"><a href="<?php echo $category['href']; ?>"><img src="<?php echo $category['thumb']; ?>" alt="<?php echo $category['name']; ?>" /></a></div>
 	<?php } ?>

@@ -6,7 +6,7 @@ $_['heading_title']        = 'Регистрация';
 $_['text_account']         = 'Личный Кабинет';
 $_['text_register']        = 'Регистрация';
 $_['text_account_already'] = 'Если Вы уже зарегистрированы, перейдите на страницу <a href="%s">авторизации</a>.';
-$_['text_your_details']    = 'Основные данные';
+$_['text_your_details']    = 'Ваши данные';
 $_['text_your_address']    = 'Ваш адрес';
 $_['text_newsletter']      = 'Рассылка новостей';
 $_['text_your_password']   = 'Ваш пароль';
@@ -27,8 +27,8 @@ $_['entry_city']           = 'Город';
 $_['entry_country']        = 'Страна';
 $_['entry_zone']           = 'Регион / Область';
 $_['entry_newsletter']     = 'Подписка на новости';
-$_['entry_password']       = 'Пароль';
-$_['entry_confirm']        = 'Подтверждение пароля';
+$_['entry_password']       = 'Введите пароль';
+$_['entry_confirm']        = 'Подтвердите пароль';
 
 // Error
 $_['error_exists']         = 'Данный E-Mail уже зарегистрирован!';

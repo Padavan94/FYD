@@ -1,3 +1,4 @@
-vqmod/checked.cache
+.idea
+node_modules
+bower_components
 nbproject
-

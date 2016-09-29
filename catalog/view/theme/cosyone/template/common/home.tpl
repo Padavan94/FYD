@@ -17,11 +17,11 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?> homepage">
-    <?php echo $content_top; ?>
+     <?php echo $content_top; ?>
      <?php echo $content_bottom_half; ?>
      <?php echo $content_bottom; ?>
-     </div>
-    <?php echo $column_right; ?>
     </div>
+    <?php echo $column_right; ?>
+  </div>
 </div>
 <?php echo $footer; ?> 

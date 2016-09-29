@@ -21,6 +21,7 @@
 
 			<li><a href="<?php echo $question_url; ?>"><?php echo $question_menu; ?></a></li>
 			
+       <li><a href="<?php echo $special_offers; ?>"><?php echo $text_special_offers; ?></a></li>
     </ul>
   </li>
   <li id="extension"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span><?php echo $text_extension; ?></span></a>

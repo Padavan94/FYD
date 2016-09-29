@@ -249,7 +249,7 @@ class ControllerModulePPLogin extends Controller {
 
 		$data['locales'][] = array(
 			'value' => 'ru-ru',
-			'text' => 'Russian'
+			'text' => 'Ru'
 		);
 
 		$data['locales'][] = array(

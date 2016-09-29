@@ -31,6 +31,7 @@
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <?php if($cosyone_use_responsive == 'enabled'){ ?>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/cosyone/stylesheet/responsive.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 <?php } ?>
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
@@ -50,7 +51,7 @@
 <?php foreach ($analytics as $analytic) { ?>
 <?php echo $analytic; ?>
 <?php } ?>
-<?php echo $cosyone_styles; ?>
+
 </head>
 <body class="<?php echo $class; ?>">
 <div class="outer_container <?php echo $cosyone_default_product_style; ?> <?php if($cosyone_use_custom){ echo $cosyone_container_layout; } ?> <?php echo $cosyone_use_breadcrumb; ?>">
@@ -63,18 +64,21 @@
 <?php if($cosyone_header_style == 'header1'){ ?>
     <?php } else { ?>
     <div class="drop_downs_wrapper">
-    <?php echo $header_login; ?>
+        <?php echo $search; ?>
+     <!--<?php echo $header_login; ?>
 	<?php echo $language; ?>
-  	<?php echo $currency; ?>
+  	<?php echo $currency; ?>-->
     </div>
     <?php } ?>
   <div class="promo_message"><?php echo $cosyone_top_promo_message; ?></div>
     <div class="links contrast_font">
-        <a href="<?php echo $back_call; ?>" class="back__call">Обратный звонок</a>
+        <a href="<?php echo $login; ?>" class="log-head"><?php echo $text_login; ?></a>
+        <a href="<?php echo $register; ?>" class="reg-head"><?php echo $text_register; ?></a>       
+        <!--<a href="<?php echo $back_call; ?>" class="back__call">Обратный звонок</a>
         <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>
         <a href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a>
         <a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a>
-        <a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>
+        <a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>-->
     </div>
   <div class="clearfix"></div>
 </div>
@@ -87,8 +91,9 @@
   <?php } ?>
  <?php if($cosyone_header_style == 'header3') { ?>
  <?php } else { ?>
- <?php if($cosyone_header_search == 'enabled') { ?>
- <?php echo $search; ?>
+ <?php echo $language; ?>-->
+ <!--<?php if($cosyone_header_search == 'enabled') { ?>
+ <?php echo $language; ?>
  <?php } ?>
  <?php } ?>
  <div class="mobile_clear"></div>
@@ -161,7 +166,7 @@
           </div><!-- wrapper ends -->
           </div>
           <?php } ?>
-        </li>
+        </li>-->
         <?php } ?>
         <?php } ?>
         <?php if($cosyone_custom_menu_block == 'enabled'){ ?>
@@ -246,7 +251,7 @@
 		<li><a href="<?php echo $cosyone_custom_menu_url6; ?>"><?php echo $cosyone_custom_menu_title6; ?></a></li>
         <?php } ?>
       </ul>
-
+   
 </div>
 </div>
 </div> <!-- header_wrapper ends -->
