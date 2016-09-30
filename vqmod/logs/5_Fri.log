@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 ---------- Date: 2016-09-30 12:24:10 ~ IP : 127.0.0.1 ----------
 REQUEST URI : /index.php?route=checkout/cart
 MOD DETAILS:
    modFile   : D:\openserver\OpenServer\domains\fyd.net\vqmod/xml/all.install.ocmod.xml
+=======
+---------- Date: 2016-09-30 12:35:31 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=common/home
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\fyd.net\vqmod/xml/all.install.ocmod.xml
+>>>>>>> 2a7fd3dfefbcd5de9787eaec88c60f8ad8b30fc3
    id        : 
    version   : OpenCart Version 2.2
    vqmver    : 2.0.0
@@ -12,10 +19,87 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <ul class="nav navbar-n
 ----------------------------------------------------------------------
 
 
+<<<<<<< HEAD
 ---------- Date: 2016-09-30 12:24:19 ~ IP : 127.0.0.1 ----------
 REQUEST URI : /index.php?route=checkout/cart
 MOD DETAILS:
    modFile   : D:\openserver\OpenServer\domains\fyd.net\vqmod/xml/all.install.ocmod.xml
+=======
+---------- Date: 2016-09-30 12:35:46 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=common/home
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\fyd.net\vqmod/xml/all.install.ocmod.xml
+   id        : 
+   version   : OpenCart Version 2.2
+   vqmver    : 2.0.0
+   author    : Rupak Nepali
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <ul class="nav navbar-nav">
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-30 12:36:03 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=common/home
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\fyd.net\vqmod/xml/all.install.ocmod.xml
+   id        : 
+   version   : OpenCart Version 2.2
+   vqmver    : 2.0.0
+   author    : Rupak Nepali
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <ul class="nav navbar-nav">
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-30 13:54:58 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=account/logout
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\fyd.net\vqmod/xml/all.install.ocmod.xml
+   id        : 
+   version   : OpenCart Version 2.2
+   vqmver    : 2.0.0
+   author    : Rupak Nepali
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <ul class="nav navbar-nav">
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-30 13:56:18 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=account/logout
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\fyd.net\vqmod/xml/all.install.ocmod.xml
+   id        : 
+   version   : OpenCart Version 2.2
+   vqmver    : 2.0.0
+   author    : Rupak Nepali
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <ul class="nav navbar-nav">
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-30 13:57:21 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=account/logout
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\fyd.net\vqmod/xml/all.install.ocmod.xml
+   id        : 
+   version   : OpenCart Version 2.2
+   vqmver    : 2.0.0
+   author    : Rupak Nepali
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <ul class="nav navbar-nav">
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-09-30 14:01:00 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /index.php?route=account/login
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\fyd.net\vqmod/xml/all.install.ocmod.xml
+>>>>>>> 2a7fd3dfefbcd5de9787eaec88c60f8ad8b30fc3
    id        : 
    version   : OpenCart Version 2.2
    vqmver    : 2.0.0
