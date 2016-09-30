@@ -36,7 +36,7 @@
       </h1>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="basket">
         <div class="cart-info-wrapper">
-    	<div class="cart-info">
+      <div class="cart-info">
           <table class="contrast_font">
             <thead>
               <tr>
@@ -78,8 +78,18 @@
                 <td class="model mobile_hide"><?php echo $product['model']; ?></td>
                 <td class="unit_price mobile_hide"><?php echo $product['price']; ?></td>
                 <td class="quantity">
-            <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
-             <a onclick="$('#basket').submit();" data-tooltip="<?php echo $button_update; ?>" class="sq_icon"><i class="fa fa-refresh"></i></a>
+                <div class="counter-zone">
+                <div class="counter">
+                  <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" readonly/>
+                  <div class="btns">
+                    <button class="increment">+</button>
+                    <button class="decrement">-</button>
+                  </div>
+                </div>
+                <a onclick="$('#basket').submit();" data-tooltip="<?php echo $button_update; ?>" class="sq_icon"><i class="fa fa-refresh"></i></a>
+                </div>
+            
+             
              </td>
                 <td class="price total mobile_hide"><?php echo $product['total']; ?></td>
                 <td class="remove mobile_hide">
@@ -105,25 +115,20 @@
             </tbody>
           </table>
           <div class="cart_bottom_line">
-              
-              <div class="col-md-4"><a href="<?php echo $continue; ?>" class="button contrast"><?php echo $button_shopping; ?></a></div>
-              <div class="col-md-4">
-                 <?php foreach ($totals as $total) { ?> <?php echo $total['text']; ?><?php } ?>
-                <table id="total" class="contrast_font">
-                    
-                    <tr> <?php foreach ($totals as $total) { ?>                     
-                      <td class="right amounts"><?php echo $total['text']; ?></td><?php } ?>
-                    </tr>
-                    <?php } ?>
-                </table>
+            <a href="<?php echo $continue; ?>" class="button contrast"><?php echo $button_shopping; ?></a>
+            <?php foreach ($totals as $total) { ?>
+              <div>
+                <span><?php echo $total['title']; ?></span>: <span><b><?php echo $total['text']; ?></b></span>
               </div>
-              <div class="col-md-4">
-                <a href="<?php echo $checkout; ?>" class="button active checkout"><?php echo $button_checkout; ?></a>
-              </div>
+            <?php } ?>
+            <a href="<?php echo $checkout; ?>" class="button active checkout"><?php echo $button_checkout; ?></a>
           </div>
           </div>
         </div>
       </form>
+
+
+      <?php if(false): ?>
       
       <div class="row">
       
@@ -138,16 +143,24 @@
       </div>
       
       <div class="col-sm-4">
-     <!-- <div class="cart-total">
-
-  <div class="cart-total-bottom">
+      <div class="cart-total">
+       <table id="total" class="contrast_font">
+      <?php foreach ($totals as $total) { ?>
+      <tr>
+        <td class="right"><?php echo $total['title']; ?></td>
+        <td class="right amounts"><?php echo $total['text']; ?></td>
+      </tr>
+      <?php } ?>
+    </table>
+    <div class="cart-total-bottom">
     <a href="<?php echo $checkout; ?>" class="button active checkout"><?php echo $button_checkout; ?></a>
     </div>
-       </div>-->
+       </div>
       </div>
       
       </div>
       
+      <?php endif; ?>
       
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>

@@ -1,7 +1,8 @@
 
 
-<?php foreach ($products as $product) { ?><!--
-    --><div class="item contrast_font product-layout">
+<?php foreach ($products as $product) { ?>
+<div class="item contrast_font product-layout">
+      <div class="item__inner">
        <div class="image">
         <?php if ($product['special'] && $cosyone_percentage_sale_badge == 'enabled') { ?>
 	    <div class="sale_badge">-<?php echo $product['sales_percantage']; ?>%</div>
@@ -19,7 +20,7 @@
         </div>
     	<?php } ?>
         </div><!-- image ends -->
-      <div class="information_wrapper">
+      <div class="information_wrapper clearfix">
       <div class="left">
       <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
        <?php if ($product['brand_name'] && $cosyone_brand) { ?>
@@ -43,19 +44,19 @@
         <?php } ?>
       </div>
       <?php } ?>
-      <div class="cart">       
+      <!-- <div class="cart">       
       <button type="submit" class="button contrast" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');" ><i class="fa fa-shopping-cart"></i> <?php echo $button_cart; ?></button>
-    </div>  
-    <div class="icons_wrapper">
-    <a class="sq_icon" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" data-tooltip="<?php echo $button_wishlist; ?>"><i class="fa fa-heart"></i></a>
-    <a class="sq_icon compare" onclick="compare.add('<?php echo $product['product_id']; ?>');" data-tooltip="<?php echo $button_compare; ?>"><i class="fa fa-arrow-right"></i><i class="fa fa-arrow-left"></i></a>
-    <?php if ($cosyone_text_ql) {?>
-    <a href="<?php echo $product['quickview']; ?>" rel="nofollow" class="sq_icon qlook quickview" data-tooltip="<?php echo $cosyone_text_ql; ?>"><i class="fa fa-eye"></i></a>
-    <?php } ?>
-    <a class="sq_icon contrast add_to_cart" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');" data-tooltip="<?php echo $button_cart; ?>"><i class="fa fa-shopping-cart"></i></a>
-    <a class="plain_link wishlist" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" ><?php echo $button_wishlist; ?></a>
-    <a class="plain_link compare" onclick="compare.add('<?php echo $product['product_id']; ?>');" ><?php echo $button_compare; ?></a>
-    </div>
+          </div>   -->
+   <!--  <div class="icons_wrapper">
+   <a class="sq_icon" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" data-tooltip="<?php echo $button_wishlist; ?>"><i class="fa fa-heart"></i></a>
+   <a class="sq_icon compare" onclick="compare.add('<?php echo $product['product_id']; ?>');" data-tooltip="<?php echo $button_compare; ?>"><i class="fa fa-arrow-right"></i><i class="fa fa-arrow-left"></i></a>
+   <?php if ($cosyone_text_ql) {?>
+   <a href="<?php echo $product['quickview']; ?>" rel="nofollow" class="sq_icon qlook quickview" data-tooltip="<?php echo $cosyone_text_ql; ?>"><i class="fa fa-eye"></i></a>
+   <?php } ?>
+   <a class="sq_icon contrast add_to_cart" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');" data-tooltip="<?php echo $button_cart; ?>"><i class="fa fa-shopping-cart"></i></a>
+   <a class="plain_link wishlist" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" ><?php echo $button_wishlist; ?></a>
+   <a class="plain_link compare" onclick="compare.add('<?php echo $product['product_id']; ?>');" ><?php echo $button_compare; ?></a>
+   </div> -->
 
         <?php if (($product['special']) && ($product['special_date_end'] > 0) && ($cosyone_product_countdown)) { ?>
     	<div class="offer_popup">
@@ -74,5 +75,5 @@
 		</script>
     	<?php } ?>
     	</div>
-    </div><!--
-    --><?php } ?>
+      </div>
+      </div><?php } ?>

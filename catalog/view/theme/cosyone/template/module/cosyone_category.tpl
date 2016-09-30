@@ -1,5 +1,5 @@
-<div class="box">
-  <div class="box-heading"><?php echo $heading_title; ?></div>
+<div class="box cat">
+  <div class="box-heading"><i class="icon-category"></i><?php echo $heading_title; ?><i class="icon-arrow-down"></i></div>
   <div class="box-content box-category">
 	<ul>
        <?php foreach ($categories as $category_1) { ?>

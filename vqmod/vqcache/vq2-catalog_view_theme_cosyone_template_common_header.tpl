@@ -39,9 +39,10 @@
 <?php if ($direction == 'rtl') { ?>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/cosyone/stylesheet/rtl.css" />
 <?php } ?>
-
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/css/main.css" />
 <script type="text/javascript" src="catalog/view/theme/cosyone/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/cosyone/js/cosyone_common.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/main.js"></script>
 <?php foreach ($scripts as $script) { ?>
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
 <?php } ?>
@@ -256,5 +257,6 @@
 </div>
 </div> <!-- header_wrapper ends -->
 </div> <!-- inner conainer ends -->
-<div class="breadcrumb_wrapper"></div>
 <div id="notification" class="container"></div>
+<main>
+<div class="breadcrumb_wrapper"></div>
