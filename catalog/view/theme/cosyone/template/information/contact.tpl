@@ -36,22 +36,21 @@
   			<a href="https://maps.google.com/maps?q=<?php echo urlencode($geocode); ?>&hl=<?php echo $geocode_hl; ?>&t=m&z=15" target="_blank"><i class="fa fa-map-marker"></i> <?php echo $button_map; ?></a>
   			<?php } ?>-->
             <div class="col-sm-6">
-                <div class="col-sm-12"><span class="contrast_font"><?php echo $text_telephone; ?></span><br />
-			<?php echo $telephone; ?><br /></div>
-                <div class="col-sm-12"><strong>Контактное лицо</strong><br />Диана</div>
+                <div class="col-sm-12 phone-c"><span><?php echo $text_telephone; ?></span><br />
+			<strong><?php echo $telephone; ?></strong><br /></div>
+                <div class="col-sm-12 perc-c"><span>Контактное лицо</span><br /><strong>Диана</strong></div>
             </div>
             <div class="col-sm-6">
-                <div class="col-sm-12"><strong>Адрес</strong><br />г. Москва, пер. Лермонтовский</div>
-                <div class="col-sm-12"><strong>Email</strong><br />ssdfsd@fg.gh</div>
+                <div class="col-sm-12 adr-c"><span>Адрес</span><br />г. Москва, пер. Лермонтовский</div>
+                <div class="col-sm-12 mail-c"><span>Email</span><br /><strong>ssdfsd@fg.gh</strong></div>
             </div>
             </div>
-            <div class="col-sm-3 margin-b">
-           
+            <div class="col-sm-3 margin-b work-c">           
             <!--<?php if ($fax) { ?>
   			<br /><span class="contrast_font"><?php echo $text_fax; ?></span><br />
   			<?php echo $fax; ?>
   			<?php } ?>-->
-            <strong>График работы:</strong><br />ПН-ПТ - 9.00-20.00<br />СБ - 10.00-17.00<br />ВС - ВЫХОДНОЙ
+            <span>График работы:</span><br />ПН-ПТ - <strong>9.00-20.00</strong><br />СБ - <strong>10.00-17.00</strong><br />ВС - <strong class="sp-wcork">ВЫХОДНОЙ</strong>
             </div>
             <div class="col-sm-3">
             <!--<?php if ($open) { ?>
@@ -63,7 +62,7 @@
             <br /><span class="contrast_font"><?php echo $text_comment; ?></span><br />
             <?php echo $comment; ?>
             <?php } ?>-->
-            <div class="box-content icons_wrapper">
+            <div class="box-content icons_wrapper icons-c">
                 <a href="#" class="external sq_icon" data-tooltip="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 <a href="#" class="external sq_icon" data-tooltip="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <a href="#" class="external sq_icon" data-tooltip="Pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
@@ -71,7 +70,7 @@
                 <a href="#" class="external sq_icon" data-tooltip="VK"><i class="fa fa-vk" aria-hidden="true"></i></a>
                 <div class="clearfix"></div>
             </div>
-            <div class="write-btn">Напишите нам</div>
+            <div class="grey-btn">Напишите нам</div>
             
             </div>
           </div>

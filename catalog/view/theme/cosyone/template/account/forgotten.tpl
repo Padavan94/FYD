@@ -23,11 +23,11 @@
         <fieldset>
           <div class="form-group required">
             <label class="control-label" for="input-email"><?php echo $entry_email; ?></label>
-              <input type="email" name="email" value="" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
+              <input type="email" name="email" value="" placeholder="Email" id="input-email" class="form-control" />
           </div>
         </fieldset>
         <div class="buttons clearfix">
-          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
+          <div class="pull-left"><!--<a href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a>--></div>
           <div class="pull-right">
             <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
           </div>
