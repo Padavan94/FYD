@@ -72,6 +72,7 @@
     <?php } ?>
   <div class="promo_message"><?php echo $cosyone_top_promo_message; ?></div>
     <div class="links contrast_font">
+        
         <a href="<?php echo $login; ?>" class="log-head"><?php echo $text_login; ?></a>
         <a href="<?php echo $register; ?>" class="reg-head"><?php echo $text_register; ?></a>       
         <!--<a href="<?php echo $back_call; ?>" class="back__call">Обратный звонок</a>
