@@ -1,4 +1,25 @@
 <?php echo $header; ?>
+
+<div class="filter-category">
+  <div class="container">
+    <div class="filter-category__inner">
+      <?php echo $content_top; ?>
+      <div class="sort"><?php echo $text_sort; ?>
+      <select id="input-sort" onchange="location = this.value;">
+          <?php foreach ($sorts as $sorts) { ?>
+          <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+          <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+          <?php } else { ?>
+          <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+          <?php } ?>
+          <?php } ?>
+        </select>     
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="container">
   <!--<ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -11,14 +32,12 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-	
-    <div id="content" class="<?php echo $class; ?> <?php echo $cosyone_grid_category; ?>">
-    <?php echo $content_top; ?>
   
-  <h1><?php echo $heading_title; ?></h1>
+    <div id="content" class="<?php echo $class; ?> <?php echo $cosyone_grid_category; ?>">
+  
   <?php if ($thumb || $description) { ?>
   <div class="category-info">
-	<?php if ($cosyone_category_thumb == 'enabled' && ($thumb)) { ?>
+  <?php if ($cosyone_category_thumb == 'enabled' && ($thumb)) { ?>
     <div class="image"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /></div>
     <?php } ?>
     <?php if ($description) { ?>
@@ -36,8 +55,8 @@
     -->
     <div class="item contrast_font">
     <?php if ($category['thumb']) { ?>
-	<div class="image"><a href="<?php echo $category['href']; ?>"><img src="<?php echo $category['thumb']; ?>" alt="<?php echo $category['name']; ?>" /></a></div>
-	<?php } ?>
+  <div class="image"><a href="<?php echo $category['href']; ?>"><img src="<?php echo $category['thumb']; ?>" alt="<?php echo $category['name']; ?>" /></a></div>
+  <?php } ?>
     <div class="name"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></div>
     </div>
     <?php } ?>
@@ -81,8 +100,8 @@
     --><div class="item contrast_font product-layout">
        <div class="image">
         <?php if ($product['special'] && $cosyone_percentage_sale_badge == 'enabled') { ?>
-	    <div class="sale_badge">-<?php echo $product['sales_percantage']; ?>%</div>
-	    <?php } ?>
+      <div class="sale_badge">-<?php echo $product['sales_percantage']; ?>%</div>
+      <?php } ?>
         <?php if ($product['thumb_hover'] && $cosyone_rollover_effect == 'enabled') { ?>
         <div class="image_hover"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb_hover']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
         <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a>
@@ -94,7 +113,7 @@
         <div class="main_quicklook">
         <a href="<?php echo $product['quickview']; ?>" rel="nofollow" class="button quickview"><i class="fa fa-eye"></i> <?php echo $cosyone_text_ql; ?></a>
         </div>
-    	<?php } ?>
+      <?php } ?>
         </div><!-- image ends -->
       <div class="information_wrapper">
       <div class="left">
@@ -135,7 +154,7 @@
     </div>
 
         <?php if (($product['special']) && ($product['special_date_end'] > 0) && ($cosyone_product_countdown)) { ?>
-    	<div class="offer_popup">
+      <div class="offer_popup">
         <div class="offer_background"></div>
         <div class="offer_content">
         <div class="countdown <?php echo $product['product_id']; ?>"></div>
@@ -144,13 +163,13 @@
         <?php } ?>
         </div>
         </div>
-		<script type="text/javascript">
-		$('.<?php echo $product['product_id']; ?>').countdown({
-		until: <?php echo $product['special_date_end']; ?>, 
-		layout: '<span class="main_font"><?php echo $text_category_expire; ?></span><br /><i>{dn}</i> {dl}&nbsp; <i>{hn}</i>  {hl}&nbsp; <i>{mn}</i>  {ml}&nbsp; <i>{sn}</i> {sl}'});
-		</script>
-    	<?php } ?>
-    	</div>
+    <script type="text/javascript">
+    $('.<?php echo $product['product_id']; ?>').countdown({
+    until: <?php echo $product['special_date_end']; ?>, 
+    layout: '<span class="main_font"><?php echo $text_category_expire; ?></span><br /><i>{dn}</i> {dl}&nbsp; <i>{hn}</i>  {hl}&nbsp; <i>{mn}</i>  {ml}&nbsp; <i>{sn}</i> {sl}'});
+    </script>
+      <?php } ?>
+      </div>
     </div><!--
     --><?php } ?>
     </div>
@@ -171,47 +190,45 @@
   <?php echo $content_bottom; ?></div>
   <?php echo $column_right; ?></div>
   
-
 <script type="text/javascript">
 $(function() {
-	var pv = $.cookie('product_view');
-	if (pv == 'g') {
-		$('#main').removeClass();
-		$('#main').addClass('product-grid');
-		$('#list_view_icon').removeClass();
-		$('#grid_view_icon').addClass('active');
-	} else if (pv == 'l') {
-		$('#main').removeClass();
-		$('#main').addClass('product-list');
-		$('#grid_view_icon').removeClass();
-		$('#list_view_icon').addClass('active');
-	} else {
-		$('#<?php echo $cosyone_default_view?>_view_icon').addClass('active');
-	}
+  var pv = $.cookie('product_view');
+  if (pv == 'g') {
+    $('#main').removeClass();
+    $('#main').addClass('product-grid');
+    $('#list_view_icon').removeClass();
+    $('#grid_view_icon').addClass('active');
+  } else if (pv == 'l') {
+    $('#main').removeClass();
+    $('#main').addClass('product-list');
+    $('#grid_view_icon').removeClass();
+    $('#list_view_icon').addClass('active');
+  } else {
+    $('#<?php echo $cosyone_default_view?>_view_icon').addClass('active');
+  }
 });
 $(document).ready(function() {
-	$('#grid_view_icon').click(function() {
-		$(this).addClass('active');
-		$('#list_view_icon').removeClass();
-		$('#main').fadeOut(300, function() {
-			$(this).removeClass();
-			$(this).addClass('product-grid').fadeIn(300);
-			$.cookie('product_view', 'g');
-		});
-		return false;
-	});
-	$('#list_view_icon').click(function() {
-		$(this).addClass('active');
-		$('#grid_view_icon').removeClass();
-		$('#main').fadeOut(300, function() {
-			$(this).removeClass();
-			$(this).addClass('product-list').fadeIn(300);
-			$.cookie('product_view', 'l');
-		});
-		return false;
-	});
+  $('#grid_view_icon').click(function() {
+    $(this).addClass('active');
+    $('#list_view_icon').removeClass();
+    $('#main').fadeOut(300, function() {
+      $(this).removeClass();
+      $(this).addClass('product-grid').fadeIn(300);
+      $.cookie('product_view', 'g');
+    });
+    return false;
+  });
+  $('#list_view_icon').click(function() {
+    $(this).addClass('active');
+    $('#grid_view_icon').removeClass();
+    $('#main').fadeOut(300, function() {
+      $(this).removeClass();
+      $(this).addClass('product-list').fadeIn(300);
+      $.cookie('product_view', 'l');
+    });
+    return false;
+  });
 });
 </script>
-
 </div>
 <?php echo $footer; ?>
