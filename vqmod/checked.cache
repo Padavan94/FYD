@@ -264,3 +264,5 @@ catalog\language\en-gb\account\logout.php
 catalog\language\ru-ru\account\logout.php
 catalog\view\theme\default\template\common\success.tpl
 >>>>>>> 2a7fd3dfefbcd5de9787eaec88c60f8ad8b30fc3
+catalog\controller\quickcheckout\register.php
+catalog\view\theme\cosyone\template\quickcheckout\register.tpl
