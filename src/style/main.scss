@@ -388,7 +388,35 @@ main{
 	}
 }
 
-
+.checkout-quiq{
+	#payment-address .box-heading:before, #shipping-method .box-heading:before, #payment-method .box-heading:before, #cart1 .box-heading:before{
+		border-radius: 50%;
+		background-color: #f6b5af;
+	}
+	input[type='text'],
+	input[type='password'],
+	select{
+		width: 100%;
+		height: 56px;
+		border: 1px solid #e4e4e4;
+	}
+	textarea{
+		border: 1px solid #e4e4e4;
+		height: 150px;
+	}
+	.control-label{
+		color: #880e4f;
+		font-style: italic;
+	}
+	.form-control{
+		margin-top: 5px;
+	}
+	div.required .control-label:before{
+		    position: absolute;
+    left: 3px;
+    top: -4px;
+	}
+}
 
 
 
@@ -402,6 +430,17 @@ main{
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.19);
+}
+
+.btn, .btn-primary,a.button.active, input.button.active, input.button.active:hover, #button-confirm, .style-2 .add_to_cart{
+	background-color: #f6b5af;
+	border: 1px solid transparent;
+	color: #fff;
+	&:hover{
+		color: #303131;
+		background-color: transparent;
+		border-color: #f6b5af;
+	}
 }
 
 .breadcrumb_wrapper{
