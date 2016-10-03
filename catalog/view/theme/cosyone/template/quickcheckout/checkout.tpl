@@ -13,7 +13,7 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+    <div id="content" class="<?php echo $class; ?> checkout-quiq"><?php echo $content_top; ?>
     <div id="social_login_content_holder"></div>
       <h1><?php echo $heading_title; ?></h1>
 	  <!-- Start -->
