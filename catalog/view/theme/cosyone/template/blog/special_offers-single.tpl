@@ -6,7 +6,7 @@
     <div class="row">
       <div class="content__inner">
         <div class="aside-wrap">
-          <aside class="aside">
+         <!-- <aside class="aside">
             <div class="aside__phones">
               <div class="aside__phones-inner">
                 <a href="tel:0937696000"><b>(093)</b> 76-96-000</a>
@@ -21,7 +21,7 @@
               <a href="mailto:dostavka24.cn.ua@gmail.com">dostavka24.cn.ua@gmail.com</a>
             </div>
           </aside>
-        </div>
+        </div>-->
         <div id="content" class="content__right">
           <ul class="breadcrumb">
             <?php foreach ($breadcrumbs as $breadcrumb) { ?>

@@ -4932,6 +4932,7 @@ a.pull-right.login-forgotten {
     width: 40px
 }
 .account-login .container #content:before,.account-login .container #content:after,
+.account-logout .container #content:before,.account-logout .container #content:after,
 .account-register .container #content:before,.account-register .container #content:after,
 .product-category-59 .container #content:before,.product-category-59 .container #content:after,
 .information-information-7 .container #content:before,.information-information-7 .container #content:after,
@@ -4971,14 +4972,14 @@ a.pull-right.login-forgotten {
 .information-information-13 .container #content:after{ background: url(../image/brand-bg2.png) bottom left no-repeat;left: auto;right: -350px;bottom: -30px;width: 385px;}
 .error-not_found .container #content:before{background: url(../image/err404-2.png)  bottom left no-repeat;bottom: -30px;left: -390px;width: 100%;z-index: 9999999;}
 .error-not_found .container #content:after{ background: url(../image/err404-3.png) bottom left no-repeat;left: auto;right: -300px;float: right;bottom: -30px;width: 50%;}
-.account-login .container #content:before{background: url(../image/log-bg1.png) bottom left no-repeat;width: 30%;left: -30%;bottom: -5%;}
-.account-login .container #content:after{background: url(../image/log-bg2.png) bottom left no-repeat;left: auto;right: -250px;width: 30%;bottom: -5%;}
+.account-login .container #content:before, .account-logout .container #content:before{background: url(../image/log-bg1.png) bottom left no-repeat;width: 30%;left: -30%;bottom: -5%;}
+.account-login .container #content:after, .account-logout .container #content:after{background: url(../image/log-bg2.png) bottom left no-repeat;left: auto;right: -250px;width: 30%;bottom: -5%;}
 .account-register .container #content:before{background: url(../image/reg-bg1.png) bottom left no-repeat;width: 30%;left: -30%;bottom: -5%;}
 .account-register .container #content:after{background: url(../image/reg-bg2.png) bottom left no-repeat;left: auto;right: -250px;width: 30%;bottom: -5%;}
 .account-forgotten .container #content:before{background: url(../image/forgot-bg1.png) bottom left no-repeat;width: 30%;left: -30%;bottom: -5%;}
 .account-forgotten .container #content:after{background: url(../image/forgot-bg2.png) bottom left no-repeat;left: auto;right: -250px;width: 30%;bottom: -5%;}
 
-.account-login .container #content,.information-contact .container #content, .account-forgotten .container #content,
+.account-login .container #content, .account-logout .container #content, .information-contact .container #content, .account-forgotten .container #content,
 .product-category-59 .container #content,.information-information-11 .container #content, .error-not_found .container #content{
     min-height: 580px;
     position: relative;

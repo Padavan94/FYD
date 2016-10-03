@@ -1,6 +1,6 @@
 <?php if($filter_groups || $categories || $options || $manufacturers || $attributes || $price_slider) { ?>
 <div class="box filter_holder">
-<div class="box-heading"><?php echo $heading_title; ?></div>
+<div class="box-heading"><i class="icon-money"></i><?php echo $heading_title; ?></div>
 
 <div class="box" id="adv_ajaxfilter_box">
 
@@ -15,10 +15,10 @@
                 </div>
             </div>
             <div class="option_box" <?php if(!$price_slider) { echo 'style="display:none"';}?>>
-                <div class="option_name contrast_font"><?php echo $text_price_range?></div>
+                <!-- <div class="option_name contrast_font"><?php echo $text_price_range?></div> -->
                 <div class="price_slider collapsible">
-                <div class="price_range"><?php echo $text_range; ?>  
-                <?php if($symbol_left){ echo $symbol_left; } ?><span id="min_p_holder"></span><?php if($symbol_right){ echo $symbol_right; } ?> - 
+                <div class="price_range">
+                <?php if($symbol_left){ echo $symbol_left; } ?><span id="min_p_holder"></span><?php if($symbol_right){ echo $symbol_right; } ?> 
                 <?php if($symbol_left){ echo $symbol_left; } ?><span id="max_p_holder"></span><?php if($symbol_right){ echo $symbol_right; } ?>
                 </div>
                    
@@ -374,9 +374,9 @@
                 <?php } ?>
             <?php } ?>
         </form>
-        <div class="clear_filter">
+        <!-- <div class="clear_filter">
             <a class="button remove"><i class="fa fa-refresh"></i> <?php echo $clear_filter?></a>
-        </div>
+        </div> -->
     </div>
 </div>
 </div>

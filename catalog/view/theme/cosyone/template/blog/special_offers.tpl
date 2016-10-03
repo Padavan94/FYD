@@ -9,7 +9,7 @@
 				<?php echo $column_left; ?>
 				<!-- c-blog -->
 				<div class="c-blog">
-					<h2 class="text-left">Новости</h2>
+					<h2 class="text-left">Lookbook</h2>
 					<div class="product-layout">
 					<?php foreach($blog as $value) { ?>
 						<div class="product-thumb col-md-12">
@@ -140,7 +140,7 @@
   <div class="container">
     <div class="row">
       <div class="content__inner">
-        <div class="aside-wrap">
+       <!-- <div class="aside-wrap">
           <aside class="aside">
             <div class="aside__phones">
               <div class="aside__phones-inner">
@@ -156,34 +156,34 @@
               <a href="mailto:dostavka24.cn.ua@gmail.com">dostavka24.cn.ua@gmail.com</a>
             </div>
           </aside>
-        </div>
+        </div>-->
         <div id="content" class="content__right">
           <ul class="breadcrumb">
             <?php foreach ($breadcrumbs as $breadcrumb) { ?>
             <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
             <?php } ?>
           </ul>
-          <div class="title">
+         <!-- <div class="title">
             <h2>акции</h2>
-          </div>
+          </div>-->
           <div class="special-offers__container">
             <?php if(isset($blog) && $blog) : ?>
               <?php foreach ($blog as $post) : ?>
 
               <div class="panel-body special-offers__item special-offers__item--full-width">
-                      <div class="title">
+                      <!--<div class="title">
                           <h5><?php echo ucfirst($post['name']); ?></h5>
-                      </div>
+                      </div>-->
                       <div class="info">
                           <div class="img">
                              <img src="/image/<?php echo $post['image']; ?>" alt="img">
                           </div>
                           <div class="descr">
-                              <p><?php echo ucfirst($post['description']); ?></p>
+                             <!-- <p><?php echo ucfirst($post['description']); ?></p>
                               <div class="special-offers__date">
                                 <p class="date"><span class="icon-calendar"></span><?php echo $post['date_added']; ?></p>
                                 <p class="time"><span class="icon-clock"></span><?php echo $post['time_added']; ?></p>
-                              </div>
+                              </div>-->
                               <a href="<?php echo HTTP_SERVER; ?>index.php?route=blog/special_offers&amp;path=<?php echo $post['blog_id']; ?>">Подробнее</a>
                           </div>
                       </div>

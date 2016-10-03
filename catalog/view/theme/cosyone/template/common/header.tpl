@@ -36,9 +36,10 @@
 <?php if ($direction == 'rtl') { ?>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/cosyone/stylesheet/rtl.css" />
 <?php } ?>
-
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/css/main.css" />
 <script type="text/javascript" src="catalog/view/theme/cosyone/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/cosyone/js/cosyone_common.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/main.js"></script>
 <?php foreach ($scripts as $script) { ?>
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
 <?php } ?>
@@ -69,7 +70,13 @@
     <?php } ?>
   <div class="promo_message"><?php echo $cosyone_top_promo_message; ?></div>
     <div class="links contrast_font">
-        <a href="<?php echo $login; ?>" class="log-head"><?php echo $text_login; ?></a>
+       
+                        <?php if (!$logged) { ?>
+                    <a href="<?php echo $login; ?>" class="log-head"><?php echo $text_login; ?></a>
+                <?php }else{ ?>
+                    <a href="/index.php?route=account/logout" class="log-head"><?php echo $text_logout; ?></a>
+                <?php } ?>
+        
         <a href="<?php echo $register; ?>" class="reg-head"><?php echo $text_register; ?></a>       
         <!--<a href="<?php echo $back_call; ?>" class="back__call">Обратный звонок</a>
         <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>
@@ -253,5 +260,6 @@
 </div>
 </div> <!-- header_wrapper ends -->
 </div> <!-- inner conainer ends -->
-<div class="breadcrumb_wrapper"></div>
 <div id="notification" class="container"></div>
+<main>
+<div class="breadcrumb_wrapper"></div>

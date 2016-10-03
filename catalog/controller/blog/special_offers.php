@@ -16,7 +16,7 @@ class ControllerBlogspecialoffers extends Controller
 
             $this->load->language('blog/special_offers');
 
-            $this->document->setTitle("Новости");
+            $this->document->setTitle("Lookbook");
 
             $data['breadcrumbs'] = array();
 
@@ -57,7 +57,7 @@ class ControllerBlogspecialoffers extends Controller
 
         $data['pagination'] = $pagination->render();
 
-        $data['results'] = sprintf($this->language->get('text_pagination'), ($special_offerss_total) ? (($page - 1) * $limit) + 1 : 0, ((($page - 1) * $limit) > ($special_offerss_total - $limit)) ? $special_offerss_total : ((($page - 1) * $limit) + $limit), $special_offerss_total, ceil($special_offerss_total / $limit));
+        $data['results'] = sprintf($this->language->get('text_pagination'), ($special_offerss_total) ? (($page - 1) * $limit) + 1 : 0, ((($page - 1) * $limit) > ($special_offerss_total - $limit)) ? $special_offerss_total : ((($page - 1) * $limit) + $limit), $special_offerss_total, ceil($special_offerss_total / ($limit+1)));
 
         // http://googlewebmastercentral.blogspot.com/2011/09/pagination-with-relnext-and-relprev.html
         if ($page == 1) {
@@ -124,7 +124,7 @@ class ControllerBlogspecialoffers extends Controller
         } else {
             
             $this->load->language('blog/special_offers');
-            $this->document->setTitle("Новости");
+            $this->document->setTitle("Lookbook");
             $this->load->model('tool/image');
             $data['heading_title'] = $this->language->get('heading_title');
 

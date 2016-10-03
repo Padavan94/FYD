@@ -1,0 +1,17 @@
+
+a,i,button{
+	transition: all .2s ease;
+	&:before{
+		transition: all .2s ease;
+	}
+	&:link,&:visited,&:hover,&:active,&:focus{
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+
+$brand: #4b5a7b;
+$orange: #ff6e1b;
+$text: #373737;
+$fw-main: 16px;
