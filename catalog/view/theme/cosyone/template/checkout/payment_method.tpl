@@ -40,7 +40,7 @@
 <?php } else { ?>
 <div class="buttons">
   <div class="pull-right">
-    <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-method" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
+    <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-method" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary dgdfg" />
   </div>
 </div>
 <?php } ?>

@@ -38,6 +38,6 @@
       <label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
       <input type="password" name="password" value="" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
       <a class="pull-right login-forgotten" href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a></div>
-    <input type="button" value="<?php echo $button_login; ?>" id="button-login" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
+    <input type="button" value="<?php echo $button_login; ?>" id="button-login" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary fgf" />
   </div>
 </div>

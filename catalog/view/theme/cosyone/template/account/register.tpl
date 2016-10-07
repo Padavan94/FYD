@@ -21,7 +21,7 @@
       <!--<p><?php echo $text_account_already; ?></p>-->
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
           <fieldset id="account" class="col-md-4">
-          <div class="box-heading"><?php echo $text_your_details; ?></div>
+          <div class="box-heading box-reg"><?php echo $text_your_details; ?></div>
           <div class="form-group required" style="display: <?php echo (count($customer_groups) > 1 ? 'block' : 'none'); ?>;">
             <label class="col-sm-12 control-label"><?php echo $entry_customer_group; ?></label>
             <div class="col-sm-10">
@@ -51,7 +51,7 @@
               <?php } ?>
             </div>
           </div>
-          <div class="form-group required">
+          <div class="form-group">
             <label class="col-sm-12 control-label" for="input-lastname"><?php echo $entry_lastname; ?></label>
             <div class="col-sm-10">
               <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php echo $entry_lastname; ?>" id="input-lastname" class="form-control" />
@@ -240,8 +240,8 @@
           <?php } ?>
         </fieldset>
         <fieldset id="address" class="col-md-4">
-          <div class="box-heading"><?php echo $text_your_address; ?></div>
-          <div class="form-group" style="display: none;">
+          <div class="box-heading box-reg"><?php echo $text_your_address; ?></div>
+          <div class="form-group">
             <label class="col-sm-12 control-label" for="input-company"><?php echo $entry_company; ?></label>
             <div class="col-sm-10">
               <input type="text" name="company" value="<?php echo $company; ?>" placeholder="<?php echo $entry_company; ?>" id="input-company" class="form-control" />
@@ -262,7 +262,7 @@
               <input type="text" name="address_2" value="<?php echo $address_2; ?>" placeholder="<?php echo $entry_address_2; ?>" id="input-address-2" class="form-control" />
             </div>
           </div>
-          <div class="form-group required">
+          <div class="form-group">
             <label class="col-sm-12 control-label" for="input-city"><?php echo $entry_city; ?></label>
             <div class="col-sm-10">
               <input type="text" name="city" value="<?php echo $city; ?>" placeholder="<?php echo $entry_city; ?>" id="input-city" class="form-control" />
@@ -280,7 +280,7 @@
               <?php } ?>
             </div>
           </div>
-          <div class="form-group required">
+          <div class="form-group">
             <label class="col-sm-12 control-label" for="input-country"><?php echo $entry_country; ?></label>
             <div class="col-sm-10">
               <select name="country_id" id="input-country" class="form-control">
@@ -298,7 +298,7 @@
               <?php } ?>
             </div>
           </div>
-          <div class="form-group required">
+          <div class="form-group">
             <label class="col-sm-12 control-label" for="input-zone"><?php echo $entry_zone; ?></label>
             <div class="col-sm-10">
               <select name="zone_id" id="input-zone" class="form-control">
@@ -464,7 +464,7 @@
           <?php } ?>          
         </fieldset>
           <fieldset class="col-md-4">
-          <div class="box-heading"><?php echo $text_your_password; ?></div>
+          <div class="box-heading box-reg"><?php echo $text_your_password; ?></div>
           <div class="form-group required">
             <label class="col-sm-12 control-label" for="input-password"><?php echo $entry_password; ?></label>
             <div class="col-sm-10">
@@ -523,9 +523,9 @@
           </div>
         </div>
         <?php } else { ?>
-        <div class="buttons col-md-12">
+        <div class="buttons col-md-4">
           <div class="pull-right">
-            <input type="submit" value="<?php echo $button_continue; ?>" class="button" />
+            <input type="submit" value="<?php echo $button_continue; ?>" class="button btn-reg" />
           </div>
         </div>
         <?php } ?>

@@ -26,7 +26,7 @@ class ControllerBlogspecialoffers extends Controller
             );
 
             $data['breadcrumbs'][] = array(
-                'text' => "Акции",
+                'text' => "Lookbook",
                 'href' => $this->url->link('blog/special_offers')
             );
 
@@ -45,10 +45,11 @@ class ControllerBlogspecialoffers extends Controller
         //if (isset($this->request->get['limit'])) {
 		//	$limit = (int)$this->request->get['limit'];
 		//} else {
-			$limit = $this->config->get('config_product_limit');
+			//$limit = $this->config->get('config_product_limit');
+                        $limit=3;
 		//}
             //$blogs = $this->model_blog_special_offers->getBlog();
-	    $special_offerss_total = count($this->model_blog_special_offers->getBlog());
+	$special_offerss_total = count($this->model_blog_special_offers->getBlog());
 	$pagination = new Pagination();
         $pagination->total = $special_offerss_total;
         $pagination->page = $page;
@@ -80,31 +81,38 @@ class ControllerBlogspecialoffers extends Controller
         
 
 		$special_offerss = $this->model_blog_special_offers->getBlog($start,$limit);
-
-
+                
 
 
 
             if(!empty($special_offerss))
-            foreach($special_offerss as $b => $blog)
+            foreach($special_offerss as $b => $blog)                
             {	
+                
                 if (!$blog['image']){
                     $blog['image']= 'no_image.png';
                 }
+                
                 $data['blog'][$b]['name'] = $blog['name'];
                 $data['blog'][$b]['image'] = $blog['image'];
                 $data['blog'][$b]['description'] = $blog['description'];
                 $data['blog'][$b]['day'] = date('j', strtotime($blog['date_added']));
-                $data['blog'][$b]['blog_id'] = $blog['special_offers_id'];
-
-                
-                
+                $data['blog'][$b]['blog_id'] = $blog['special_offers_id'];                 
                 $data['blog'][$b]['month'] = $data['text_date_added'][date('n', strtotime($blog['date_added']))];
-
-                $data['blog'][$b]['year'] = date('Y', strtotime($blog['date_added']));
-                
+                $data['blog'][$b]['year'] = date('Y', strtotime($blog['date_added']));                
                 $data['blog'][$b]['date_added'] = date('j.m.Y', strtotime($blog['date_added']));
                 $data['blog'][$b]['time_added'] = date('H:i', strtotime($blog['date_added']));
+                
+                $images = $this->model_blog_special_offers->getBlogByIdImages($blog['special_offers_id']);
+                
+                if($images){                    
+                    $data['blog'][$b]['images'] = $images;                    
+                } 
+                else {
+                    $data['blog'][$b]['images'] = array();                   
+                }
+                
+                
                 
             }
             //rsort($data['blog']);
@@ -153,7 +161,7 @@ class ControllerBlogspecialoffers extends Controller
                 $data['images'] = array();
             }
             
-            
+//            var_dump( $data['images']);
             $data['breadcrumbs'][] = array(
                 'text' => $data['blog']['name'],
                 'href' => $this->url->link('blog/blog')

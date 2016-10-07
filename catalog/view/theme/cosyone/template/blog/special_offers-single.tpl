@@ -1,7 +1,7 @@
 
 <?php echo $header; ?>
 
-<div class="content">
+<div class="content content-blog-single">
   <div class="container">
     <div class="row">
       <div class="content__inner">
@@ -32,19 +32,19 @@
             <h2><?php echo ucfirst($blog['name']); ?></h2>
           </div>
           <div class="blog-single__date">
-            <p class="descr">Опубликовано:</p>
+           <!-- <p class="descr">Опубликовано:</p>-->
             <p class="date"><span class="icon-calendar"></span><?php echo $blog['date_added']; ?></p>
-            <p class="time"><span class="icon-clock"></span><?php echo $blog['time_added']; ?></p>
-          </div>
+           <!-- <p class="time"><span class="icon-clock"></span><?php echo $blog['time_added']; ?></p>-->
+          
           <div class="blog-single__container">
-                <div class="blog-single__img">
+               <!-- <div class="blog-single__img">
                     <?php if($blog['image']): ?>
                       <img src="/image/<?php echo $blog['image']; ?>" alt="<?php $blog['image']; ?>">
                       <?php else: ?>
                       <img src="/image/no_image.png" alt="/image/no_image.png" />
                     <?php endif; ?>
                     
-                </div>
+                </div>-->
                 <div class="blog-single__description">
                     <p><?php echo html_entity_decode($blog['description']); ?></p>
                 </div>
@@ -55,24 +55,6 @@
   </div>
   
 </div>
-
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
 
     
 <?php if(false){ ?>    
@@ -90,10 +72,10 @@
     
     
   <?php if($images) : ?>
-    <div class="collection-grid">
+    <div class="collection-grid col-md-12">
       <div class="collection-grid__sizer"></div>
         <?php foreach ($images as $image) : ?>
-          <div class="collection-grid__item">
+          <div class="collection-grid__item  col-md-3">
             <a href="/image/<?php echo $image['image']; ?>"><img src="/image/<?php echo $image['image']; ?>" alt="img"></a>
           </div>
         <?php endforeach; ?>
