@@ -9,7 +9,7 @@
 				<?php echo $column_left; ?>
 				<!-- c-blog -->
 				<div class="c-blog">
-					<h2 class="text-left">Новости</h2>
+					<h2 class="text-left">Lookbook</h2>
 					<div class="product-layout">
 					<?php foreach($blog as $value) { ?>
 						<div class="product-thumb col-md-12">

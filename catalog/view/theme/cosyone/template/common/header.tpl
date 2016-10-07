@@ -70,7 +70,13 @@
     <?php } ?>
   <div class="promo_message"><?php echo $cosyone_top_promo_message; ?></div>
     <div class="links contrast_font">
-        <a href="<?php echo $login; ?>" class="log-head"><?php echo $text_login; ?></a>
+       
+                        <?php if (!$logged) { ?>
+                    <a href="<?php echo $login; ?>" class="log-head"><?php echo $text_login; ?></a>
+                <?php }else{ ?>
+                    <a href="/index.php?route=account/logout" class="log-head"><?php echo $text_logout; ?></a>
+                <?php } ?>
+        
         <a href="<?php echo $register; ?>" class="reg-head"><?php echo $text_register; ?></a>       
         <!--<a href="<?php echo $back_call; ?>" class="back__call">Обратный звонок</a>
         <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>

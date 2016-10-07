@@ -11,6 +11,7 @@ $_['text_your_address']    = 'Ваш адрес';
 $_['text_newsletter']      = 'Рассылка новостей';
 $_['text_your_password']   = 'Ваш пароль';
 $_['text_agree']           = 'Я прочитал <a href="%s" class="agree"><b>%s</b></a> и согласен с условиями';
+$_['button_continue']      = 'Регистрация';
 
 // Entry
 $_['entry_customer_group'] = 'Направление бизнеса';
@@ -20,7 +21,7 @@ $_['entry_email']          = 'E-Mail';
 $_['entry_telephone']      = 'Телефон';
 $_['entry_fax']            = 'Факс';
 $_['entry_company']        = 'Компания';
-$_['entry_address_1']      = 'Адрес 1';
+$_['entry_address_1']      = 'Адрес';
 $_['entry_address_2']      = 'Адрес 2';
 $_['entry_postcode']       = 'Индекс';
 $_['entry_city']           = 'Город';

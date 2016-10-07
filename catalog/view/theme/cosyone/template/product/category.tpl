@@ -1,5 +1,9 @@
 <?php echo $header; ?>
-
+<ul class="breadcrumb">
+    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <?php } ?>
+  </ul>
 <div class="filter-category">
   <div class="container">
     <div class="filter-category__inner">
@@ -18,7 +22,7 @@
     </div>
   </div>
 </div>
-
+</div>
 
 <div class="container">
   <!--<ul class="breadcrumb">
